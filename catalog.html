@@ -1,78 +1,88 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang='ru'>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header class='main-header'>
-      <nav class='main-navigation'>
-        <a class='main-header-logo'>
-          <img src='img/index-logo.svg' width='100' height='100' alt='Логотип проекта "Седона"'>
-        </a>
-        <ul class='site-navigation'>
-          <li><a href='info.html'>Информация</a></li>
-          <li><a href='photo.html'>Фото и Видео</a></li>
-          <li><a href='map.html'>Карта Штата</a></li>
-          <li><a href='hotels.html' class='site-navigation-current'>Гостиницы</a></li>
-        </ul>
-      </nav>
-    </header>
-    
+   <div id='wrapper'>
+
+     <header class='main-header'>
+       <nav class='main-navigation'>
+         <a class='main-header-logo'>
+           <img src='img/index-logo.svg' width='100' height='100' alt='Логотип проекта 'Седона''>
+         </a>
+         <ul class='site-navigation'>
+           <li><a href='#'>Информация</a></li>
+           <li><a href='#'>Фото и Видео</a></li>
+           <li><a href='#'>Карта Штата</a></li>
+           <li><a href='#'>Гостиницы</a></li>
+         </ul>
+       </nav>
+     </header>
+
     <main class='container'>
       <h1 class='visually-hidden'>Подбор гостиницы</h1>
-      <section class="filters">
+
+      <section class='filters'>
         <h2 class='visually-hidden'>Фильтр товаров</h2>
+        <div style='background: url()'></div>
         <form><!-- Здесь будет форма --></form>
       </section>
-      <section class="catalog">
-        <h2 class="visually-hidden">Подобранные гостиницы</h2>
-        <p class='catalog-big'>Найдено:3<p>
-        <p>Сортировка:</p>
-          <ul class="catalog-sorting">
-          <li class='catalog-sorting-current'>По цене</li>
-          <li class='catalog-sorting-item'><a href="catalog-sorting-type.html">По типу</a></li>
-          <li class='catalog-sorting-item'><a href="catalog-sorting-rate.html">По рейтингу</a></li>
-        </ul>
+
+      <section class='catalog'>
+        <div class='catalog-filter'>
+        <h2 class='visually-hidden'>Подобранные гостиницы</h2>
+        <h3>Найдено:3</h3>
+        <span class='catalog-sorting'>Сортировка:</span>
+          <ul class='catalog-sorting-list'>
+            <li class='catalog-sorting-current'>По цене</li>
+            <li class='catalog-sorting-item'><a href='#'>По типу</a></li>
+            <li class='catalog-sorting-item'><a href='#'>По рейтингу</a></li>
+          </ul>
         <!-- Добавить сортировку от наименьшего и наибольшего -->
+      </div>
+
         <ul class='catalog-list'>
             <li class='catalog-item'>
               <p class='catalog-item-image'>
-                <a href='catalog-item.html'>
-                  <img src="img/hotel-1.jpg" width="200" height="150" alt='Amara Resort & Spa'>
+                <a href='#'>
+                  <img src='img/Amara-Resort-Spa.jpg' width='200' height='150' alt='Amara Resort & Spa'>
                 </a>
               </p>
               <h3>Amara Resort & Spa</h3>
-              <p>Гостиница</p>
-              <p>От 4000 Р.</p>
-             <a class='button-blue' href='hotel-1.html'> Подробнее </a>
-             <a class="button" href="#">Забронировать</a>
+              <span class='text'>Гостиница</span>
+              <span class='text'>От 4000 Р.</span>
+             <a class='button' href='#'> Подробнее </a>
+             <a class='button-book' href='#'>Забронировать</a>
              <!-- Указать рейтинг и количество звезд -->
             </li>
+
             <li class='catalog-item'>
               <p class='catalog-item-image'>
-                <a href='catalog-item.html'>
-                  <img src="img/hotel-2.jpg" width="200" height="150" alt='Desert Quail Inn'>
+                <a href='#'>
+                  <img src='img/Desert-Quail-Inn.jpg' width='200' height='150' alt='Desert Quail Inn'>
                 </a>
               </p>
               <h3>Desert Quail Inn</h3>
-              <p>Мотель</p>
-              <p>От 3000 Р.</p>
-             <a class='button-blue' href='hotel-2.html'> Подробнее </a>
-             <a class="button" href="#">Забронировать</a>
+              <span class='text'>Мотель</span>
+              <span class='text'>От 3000 Р.</span>
+             <a class='button' href='#'> Подробнее </a>
+             <a class='button-book' href='#'>Забронировать</a>
              <!-- Указать рейтинг и количество звезд -->
             </li>
+
             <li class='catalog-item'>
               <p class='catalog-item-image'>
-                <a href='catalog-item.html'>
-                  <img src="img/hotel-3.jpg" width="200" height="150" alt='Villas at Poco Diablo'>
+                <a href='#'>
+                  <img src='img/Villas-at-Poco-Diablo.jpg' width='200' height='150' alt='Villas at Poco Diablo'>
                 </a>
               </p>
               <h3>Amara Resort & Spa</h3>
-              <p>Аппартаменты</p>
-              <p>От 2000 Р.</p>
-             <a class='button-blue' href='hotel-3.html'> Подробнее </a>
-             <a class="button" href="#">Забронировать</a>
+              <span class='text'>Аппартаменты</span>
+              <span class='text'>От 2000 Р.</span>
+             <a class='button' href='#'> Подробнее </a>
+             <a class='button-book' href='#'>Забронировать</a>
              <!-- Указать рейтинг и количество звезд -->
             </li>
           </ul>
@@ -80,30 +90,33 @@
     </main>
 
     <footer class='main-footer'>
-      <p class='main-footer-big'>#visitsedona</p> <!-- Это ссылка?-->
-      <div class="footer-social">
-      <ul>
-        <li>
-          <a class="social-button" href="#"> <!-- Не понимаю, здесь нужны картинки или нет -->
+      <a class='transfer' href='#'>#visitsedona</a>
+
+      <div class='footer-social'>
+      <ul class='social-list'>
+        <li class='social-element'>
+          <a class='social-button' href='#'> <!-- Не понимаю, здесь нужны картинки или нет -->
           <img src='img/social-button-twiiter.svg' width='100' height='100' alt='Иконка twitter'>
           </a>
         </li>
-        <li>
-          <a class="social-button" href="#"> <!-- Не понимаю, здесь нужны картинки или нет -->
+        <li class='social-element'>
+          <a class='social-button' href='#'> <!-- Не понимаю, здесь нужны картинки или нет -->
           <img src='img/social-button-facebook.svg' width='100' height='100' alt='Иконка facebook'>
           </a>
         </li>
-        <li>
-          <a class="social-button" href="#"> <!-- Не понимаю, здесь нужны картинки или нет -->
+        <li class='social-element'>
+          <a class='social-button' href='#'> <!-- Не понимаю, здесь нужны картинки или нет -->
           <img src='img/social-button-youtube.svg' width='100' height='100' alt='Иконка youtube'>
           </a>
         </li>
       </ul>
     </div>
-    <a class='button' href="https://htmlacademy.ru"> <!-- Не понимаю, здесь нужны картинки или нет -->
+
+    <a class='button' href='https://htmlacademy.ru'> <!-- Не понимаю, здесь нужны картинки или нет -->
     <img src='img/footer-button.svg' width='100' height='100' alt='Изображение HTML academy'>
     </a>
-    </footer>
+  </footer>
 
+  </div>
   </body>
 </html>
