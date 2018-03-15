@@ -6,25 +6,26 @@
   </head>
 
   <body>
-   <div id='wrapper'>
+   <div class='wrapper'>
 
     <header class='main-header'>
+      <a class='main-header-logo'>
+        <img src='img/header/logo.svg' width='100' height='100' alt='Логотип проекта 'Седона''>
+      </a>
       <nav class='main-navigation'>
-        <a class='main-header-logo'>
-          <img src='img/header/logo.svg' width='100' height='100' alt='Логотип проекта 'Седона''>
-        </a>
         <ul class='site-navigation'>
-          <li><a href='#'>Информация</a></li>
-          <li><a href='#'>Фото и Видео</a></li>
-          <li><a href='#'>Карта Штата</a></li>
-          <li><a href='#'>Гостиницы</a></li>
+          <li><a href='#' aria-label='Info'>Информация</a></li>
+          <li><a href='#' aria-label='Photo and Video'>Фото и Видео</a></li>
+          <li><a href='#' aria-label='Map of the State'>Карта Штата</a></li>
+          <li><a href='#' aria-label='Hotels'>Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main class='container'>
       <h1 class='visually-hidden'>Седона</h1>
-      <div style='background: url(#)'> </div>
+      <div style='background: url(#)' class='main-banner'> </div>
+
 
       <section class='info'>
         <h2 class='visually-hidden'>Преимущества</h2>
@@ -34,8 +35,8 @@
         <div class='info-section'>
           <h3>Настоящий городок</h3>
           <span class='number'>№1</span>
-          <span class='text'>Седона - не аттракцион для туристов, там течет своя жизнь</span>
-          <div style='background: url(#)'> </div>
+          <div class='text'>Седона - не аттракцион для туристов, там течет своя жизнь</div>
+          <div style='background: url(#)' class='info-section-background-1'> </div>
         </div>
 
         <div class='info-section'>
@@ -43,45 +44,44 @@
             <li class='features-item'>
               <div class='icon house'> </div>
               <h3>Жилье</h3>
-              <span class='text'>Рекомендуем пожить в настоящем мотеле, все как в кино!</span>
+              <div class='text'>Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
             </li>
             <li class='features-item'>
               <div class='icon hamburger'> </div>
               <h3>Еда</h3>
-              <span class='text'> Всегда заказывайте фирменный бургер. Вы не разачоруетесь! </span>
+              <div class='text'> Всегда заказывайте фирменный бургер. Вы не разачоруетесь! </div>
             </li>
             <li class='features-item'>
               <div class='icon gift'> </div>
               <h3>Сувениры</h3>
-              <span class='text'>Не только китайского, но и местного производства!</span>
+              <div class='text'>Не только китайского, но и местного производства!</div>
             </li>
           </ul>
         </div>
 
         <div class='info-section'>
-        <div style='background: url(#)'>
-        <h3 >Там есть мост дьявола</h3>
-        <span class='number'>№2</span>
-        <span class='text'>Да, по нему можно пройти! Если конечно вы осмелитесь</span>
+          <div style='background: url(#)' class='info-section-background-2'> </div>
+          <h3>Там есть мост дьявола</h3>
+          <span class='number'>№2</span>
+          <div class='text'>Да, по нему можно пройти! Если конечно вы осмелитесь</div>
         </div>
 
         <div class='info-section'>
-        <div style='background: url(#)'> </div>
           <ul class='features-list'>
             <li class='features-item'>
               <h3>Небольшая площадь</h3>
               <span class='number'>№3</span>
-              <span class='text'>Все достопримечательности находятся очень быстро</span>
+              <div class='text'>Все достопримечательности находятся очень быстро</div>
             </li>
             <li class='features-item'>
               <h3>Красивая дорога</h3>
               <span class='number'>№4</span>
-              <span class='text'>Ехать в Седону из Лас-Вегаса совсем не скучно</span>
+              <div class='text'>Ехать в Седону из Лас-Вегаса совсем не скучно</div>
             </li>
             <li class='features-item'>
               <h3>Мало туристов</h3>
               <span class='number'>№5</span>
-              <span class='text'> Большинство едет в Гранд-Каньон и толпится там </span>
+              <div class='text'> Большинство едет в Гранд-Каньон и толпится там </div>
             </li>
           </ul>
         </div>
@@ -92,19 +92,28 @@
         <span class='caption'>Заинтересовались? </span>
         <span class='text'>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиницы в Седоне </span>
 
-        <form action='#'>
-          <span class='hotel-search caption'>Поиск гостиницы в Седоне</span>
+        <form action='https://echo.htmlacademy.ru' method='get' class='hotel-search'>
+          <button  type='button' class='hotel-search-button'>Поиск гостиницы в Седоне</button>
 
-          <legend class='filter-caption'>Дата заезда:</legend>
-           <input type='date' name='arrival date' value='24 апреля 2017'>
-          <legend class='filter-caption'>Дата выезда:</legend>
-            <input type='date' name='departure date' value='4 июля 2017'>
-          <legend class='filter-caption'>Взрослые:</legend>
-            <input type='range' min='1' max='10' step='1'  value='2'>
-          <legend class='filter-caption'>Дети:</legend>
-            <input type='range' min='0' max='10' step='1'  value='0'>
+          <label class='search-text'>Дата заезда:
+            <input type='date' id='search-arrival-date' name='arrival-date' value='24 апреля 2017'>
+          </label>
+          <label class='search text'> Дата выезда:
+ +            <input type='date' id='search-departure-date' name='departure-date' value='4 июля 2017'>
+ +        </label>
 
-          <button type='submit' class='hotel-search-button'>Найти</button>
+          <label class='search text'>Взрослые:
+            <button type='button' class='search-minus'>-</button>
+            <input type='text' id='search-adults-number' name='adults-number' value='2'>
+            <button type='button' class='search-plus'>+</button>
+          </label>
+          <label class='search text'>Дети:
+            <button type='button' class='search-minus'>-</button>
+            <input type='text' id='search-kids-number' name='kids-number' value='0'>
+            <button type='button' class='search-plus'>+</button>
+          </label>
+
+          <button type='submit' class='hotel-search-submit-button'>Найти</button>
         </form>
 
         <div class='map'>
@@ -114,23 +123,25 @@
       </main>
 
       <footer class='main-footer'>
-        <a class='transfer' href='#'>#visitsedona</a>
+        <a class='transfer' href='#' aria-label='Visit Sedona'>
+        <img src='img/header/logo.svg' width='100' height='100' alt='visit-sedona'>
+      </a>
 
         <div class='footer-social'>
         <ul class='social-list'>
           <li class='social-element'>
-            <a class='social-button twitter' href='#'> </a>
+            <a class='social-button twitter' href='#' aria-label='Twitter'>Twitter </a>
           </li>
           <li class='social-element'>
-            <a class='social-button facebook' href='#'> </a>
+            <a class='social-button facebook' href='#' aria-label='Facebook'>Facebook</a>
           </li>
           <li class='social-element'>
-            <a class='social-button youtube' href='#'> </a>
+            <a class='social-button youtube' href='#' aria-label='Youtube'>Youtube</a>
           </li>
         </ul>
       </div>
 
-      <a class='button' href='https://htmlacademy.ru'> <!-- Не понимаю, здесь нужны картинки или нет -->
+      <a class='button' href='https://htmlacademy.ru' aria-label='HTML academy'>Website By
       <img src='img/footer-button.svg' width='100' height='100' alt='Изображение HTML academy'>
       </a>
     </footer>
