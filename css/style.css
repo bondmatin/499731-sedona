@@ -1,0 +1,380 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  text-transform: uppercase;
+
+  backrgound-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover {
+  color: #81b3d2;
+}
+
+.site-navigation a:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation a:active {
+  color: #766357
+}
+
+.features-list {
+  list-style: none;
+}
+
+/* ИНФОРМАЦИОННАЯ СЕКЦИЯ НА ОСНОВНОЙ СТРАНИЦЕ */
+
+.info {
+  text-align: center;
+}
+
+.info h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+}
+
+.info .advantage {
+  line-height: 26px;
+}
+
+.info-section .odd {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.info-section .last {
+  background-color: #eeeeee;
+}
+
+/* ПОИСК ОТЕЛЯ НА ОСНОВНОЙ СТРАНИЦЕ */
+
+.main-page-hotel-search .caption {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.main-page-hotel-search .text {
+  line-height: 24px;
+}
+
+.hotel-search-button, .hotel-search-submit-button {
+  font-size: 21px;
+  font-weight:700;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+button {
+  font: inerit;
+
+  text-align:center;
+  vertical-align: middle;
+}
+
+.hotel-search-button button:focus,
+.hotel-search-submit-button button:focus {
+  color: rgba (255, 255, 255, 0.3);
+}
+
+.hotel-search-button {
+  background-color: #766357;
+}
+
+.hotel-search-button button:hover {
+  background-color: #604e43;
+}
+
+.hotel-search-button button:active {
+  background-color: #503e33;
+}
+
+.hotel-search-submit-button {
+  background-color: #81b3d2;
+}
+
+.hotel-search-submit-button button:hover {
+  background-color: #669ec0;
+}
+
+.hotel-search-submit-button button:active {
+  background-color: #5496bd;
+}
+
+.main-page-hotel-search form .text, .main-page-hotel-search form input {
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.main-page-hotel-search input {
+  background-color: #f2f2f2;
+}
+
+.main-page-hotel-search input:hover {
+  background-color: #ebebeb;
+}
+
+.main-page-hotel-search input:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
+.search-minus, .search-plus {
+  line-height: 26px;
+  color: #a9a9a9;
+
+  background-color: #f2f2f2;
+}
+
+.search-minus, .search-plus button:hover {
+  color: #000000;
+}
+
+.search-minus, .search-plus button:active {
+  color: #81b3d2;
+}
+
+/* ФУТЕР */
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  background-color: #81b3d2;
+  background-repeat:no-repeat;
+}
+
+.social-button button:hover {
+  background-color: #669ec0;
+}
+
+.social-button button:active {
+  background-color: #5496bd;
+  opacity: 0.3;
+}
+
+.copyright {
+  text-align: center;
+  /* как здесь сделать изображение цветным? */
+}
+
+/* КАТАЛОГ*/
+
+.filter-caption {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.filters-list li {
+  list-style: none;
+}
+
+.filters-list .label {
+  color: #ffffff;
+}
+
+.filter-button {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.filter-button button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.catalog-sorting li {
+  list-style: none;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.catalog-sorting-item {
+  text-decoration: underline;
+  color: #cccccc;
+/* Пподчеркивание точками?  */
+}
+
+.catalog-sorting-current, .catalog-sorting-item button:hover{
+  color: #81b3d2;
+}
+
+.catalog-sorting-item button:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+.catalog-sorting-button {
+  /* здесь сделать треугольник?? */
+  color: #cacaca;
+}
+
+.catalog-sorting-button button:hover {
+  color: #231f20;
+}
+
+.catalog-sorting-button button:active,
+.catalog-sorting-button button:checked  {
+  color: #81b3d2;
+}
+
+.catalog-result, .catalog-item h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+}
+
+.catalog-item-name a:hover {
+  color: #81b3d2;
+}
+
+.catalog-item-name a:checked {
+  color: #b2b2b2;
+}
+
+.button-more, .button-book {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.button-more button:active,
+.button-book button:active {
+  color: rgba (255, 255, 255, 0.3);
+}
+
+.button-book {
+  background-color: #81b3d2;
+}
+
+.button-more button:hover {
+  background-color: #669ec0;
+}
+
+.button-more button:active {
+  background-color: #5496bd;
+}
+
+.button-book{
+  background-color: #766357;
+}
+
+.button-book button:hover {
+  background-color: #604e43;
+}
+
+.button-book button:active {
+  background-color: #503e33;
+}
+
+.catalog-rating {
+  color: #666666;
+  background-color: #f2f2f2;
+}
+
+.catalog-stars-2 {
+  /* как повторить картинку фона 2 раза? */
+}
+/* ДОБАВЛЕНИЕ ФОНОВЫХ ИОЗБРАЖЕНИЙ */
+
+.main-banner, .info-section-background-1, .info-section-background-2 {
+  background-repeat: no-repeat;
+  background-color: #88bad8;
+}
+
+.main-banner {
+  background-image: url('img/main-page/main-page-welcome.png','img/main-page/main-page-background.jpg');
+}
+
+.info-section-background-1 {
+    background-image: url('img/main-page/main-page-info-background-1.jpg');
+}
+
+.info-section-background-2 {
+    background-image: url('img/main-page/main-page-info-background-2.jpg');
+}
+
+.info .icon {
+  background-repeat: no-repeat;
+}
+
+.house {
+    background-image: url('img/main-page/icon-house.svg');
+}
+
+.hamburger {
+  background-image: url('img/main-page/icon-hamburger.svg');
+}
+
+.gift {
+  background-image: url('img/main-page/icon-gift.svg');
+}
+
+.map {
+  background-image: url('img/main-page/map');
+  background-position: no-repeat;
+  background-color: #f2f1ef;
+}
+
+.twitter {
+  background-image:  url('img/footer/twitter.svg');
+}
+
+.facebook {
+  background-image:  url('img/footer/facebook.svg');
+}
+
+.youtube {
+  background-image:  url('img/footer/youtube.svg');
+}
+
+.container {
+  background-image: url('img/catalog/catalog-background.jpg');
+}
+
+.filter-list input {
+  background-image: url('img/footer/checkbox-off.svg');
+  /* как здесь менять наведено и блокировано?  */
+}
+
+.filter-list input:checked {
+  background-image: url('img/footer/checkbox-on.svg');
+  /* как здесь менять наведено и блокировано?  */
+}
+
+.catalog-stars {
+  background-image: url('img/footer/star.svg');
+  background-repeat: repeat-x;
+}

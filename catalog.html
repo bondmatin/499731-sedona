@@ -3,7 +3,9 @@
   <head>
     <meta charset='utf-8'>
     <title>HTML Academy: Седона</title>
-  </head>
+    <link rel='stylesheet' href='css/normalize.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic'>
+    <link rel='stylesheet' href='css/style.css'>
   <body>
    <div class='wrapper'>
 
@@ -73,7 +75,7 @@
       <section class='catalog'>
         <div class='catalog-filter'>
         <h2 class='visually-hidden'>Подобранные гостиницы</h2>
-        <span>Найдено:3</span>
+        <span class='catalog-result'>Найдено:3</span>
 
         <span class='catalog-sorting'>Сортировка:</span>
           <ul class='catalog-sorting-list'>
@@ -92,45 +94,45 @@
 
         <ul class='catalog-list'>
             <li class='catalog-item'>
-              <a href='#' aria-label='More Information'>
+              <div class='catalog-item-image'>
+               <img src='img/catalog/Amara-Resort-Spa.jpg' width='200' height='150' alt='Amara Resort & Spa'>
+             </div>
+              <a href='#' aria-label='More Information' class='catalog-item-name'>
                 <h3>Amara Resort & Spa</h3>
-                <div class='catalog-item-image'>
-                 <img src='img/catalog/Amara-Resort-Spa.jpg' width='200' height='150' alt='Amara Resort & Spa'>
-               </div>
               </a>
               <span class='text'>Гостиница</span>
               <span class='text'>От 4000 Р.</span>
-             <a class='button' href='#' aria-label='More Information'> Подробнее </a>
+             <a class='button-more' href='#' aria-label='More Information'> Подробнее </a>
              <a class='button-book' href='#' aria-label='Book'>Забронировать</a>
             <div class='catalog-stars catalog-stars-4'></div>
             <div class='catalog-rating'>Рейтинг:8,5</div>
             </li>
 
             <li class='catalog-item'>
-              <a href='#' aria-label='More Information'>
+              <div class='catalog-item-image'>
+               <img src='img/catalog/Desert-Quail-Inn.jpg' width='200' height='150' alt='Desert Quail Inn'>
+             </div>
+              <a href='#' aria-label='More Information' class='catalog-item-name'>
                 <h3>Desert Quail Inn</h3>
-                <div class='catalog-item-image'>
-                 <img src='img/catalog/Desert-Quail-Inn.jpg' width='200' height='150' alt='Desert Quail Inn'>
-               </div>
               </a>
               <span class='text'>Мотель</span>
               <span class='text'>От 3000 Р.</span>
-             <a class='button' href='#' aria-label='More Information'> Подробнее </a>
+             <a class='button-more' href='#' aria-label='More Information'> Подробнее </a>
              <a class='button-book' href='#' aria-label='Book'>Забронировать</a>
              <div class='catalog-stars catalog-stars-3'></div>
              <div class='catalog-rating'>Рейтинг:8,9</div>
             </li>
 
             <li class='catalog-item'>
-              <a href='#' aria-label='More Information'>
+              <div class='catalog-item-image'>
+               <img src='img/catalog/Villas-at-Poco-Diablo.jpg' width='200' height='150' alt='Villas at Poco Diablo'>
+             </div>
+              <a href='#' aria-label='More Information' class='catalog-item-name'>
                 <h3>Villas at Poco Diablo</h3>
-                <div class='catalog-item-image'>
-                 <img src='img/catalog/Villas-at-Poco-Diablo.jpg' width='200' height='150' alt='Villas at Poco Diablo'>
-               </div>
               </a>
               <span class='text'>Аппартаменты</span>
               <span class='text'>От 2000 Р.</span>
-             <a class='button' href='#' aria-label='More Information'> Подробнее </a>
+             <a class='button-more' href='#' aria-label='More Information'> Подробнее </a>
              <a class='button-book' href='#' aria-label='Book'>Забронировать</a>
              <div class='catalog-stars catalog-stars-2'></div>
              <div class='catalog-rating'>Рейтинг:9,2</div>
