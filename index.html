@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang='ru'>
   <head>
-    <meta charset='utf-8'>
-    <title>HTML Academy: Седона</title>
+   <meta charset='utf-8'>
+   <title>HTML Academy: Седона</title>
+   <link rel='stylesheet' href='css/normalize.css'>
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic'>
+   <link rel='stylesheet' href='css/style.css'>
   </head>
 
   <body>
@@ -24,19 +27,20 @@
 
     <main class='container'>
       <h1 class='visually-hidden'>Седона</h1>
-      <div style='background: url(#)' class='main-banner'> </div>
-
+      <div class='main-banner'> </div>
 
       <section class='info'>
-        <h2 class='visually-hidden'>Преимущества</h2>
-        <h3>Седона - небольшой городок в Аризоне, заслуживающий большего!</h3>
-        <span class='text'>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</span>
+        <div class='advantage'>
+          <h2 class='visually-hidden'>Преимущества</h2>
+          <h3>Седона - небольшой городок в Аризоне, заслуживающий большего!</h3>
+          <span class='text'>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</span>
+        </div>
 
-        <div class='info-section'>
+        <div class='info-section odd'>
           <h3>Настоящий городок</h3>
           <span class='number'>№1</span>
           <div class='text'>Седона - не аттракцион для туристов, там течет своя жизнь</div>
-          <div style='background: url(#)' class='info-section-background-1'> </div>
+          <div  class='info-section-background-1'> </div>
         </div>
 
         <div class='info-section'>
@@ -59,14 +63,14 @@
           </ul>
         </div>
 
-        <div class='info-section'>
-          <div style='background: url(#)' class='info-section-background-2'> </div>
+        <div class='info-section odd'>
+          <div class='info-section-background-2'> </div>
           <h3>Там есть мост дьявола</h3>
           <span class='number'>№2</span>
           <div class='text'>Да, по нему можно пройти! Если конечно вы осмелитесь</div>
         </div>
 
-        <div class='info-section'>
+        <div class='info-section last'>
           <ul class='features-list'>
             <li class='features-item'>
               <h3>Небольшая площадь</h3>
@@ -89,28 +93,41 @@
 
       <section class='main-page-hotel-search'>
         <h2 class='visually-hidden'>Поиск гостиницы</h2>
-        <span class='caption'>Заинтересовались? </span>
-        <span class='text'>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиницы в Седоне </span>
+        <div class='hotel-search-header'>
+          <div class='caption'>Заинтересовались? </span>
+          <div class='text'>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиницы в Седоне </span>
+        </div>
 
         <button  type='button' class='hotel-search-button'>Поиск гостиницы в Седоне</button>
 
         <form action='https://echo.htmlacademy.ru' method='get' class='hotel-search'>
-          <label class='search-text'>Дата заезда:
+          <label class='label'>Дата заезда:
+          <div class='input'>
             <input type='date' id='search-arrival-date' name='arrival-date' value='24 апреля 2017'>
+            <button type='button' class='calendar'>Calendar</button>
+          </div>
           </label>
-          <label class='search text'> Дата выезда:
+          <label class='label'> Дата выезда:
+            <div class='input'>
              <input type='date' id='search-departure-date' name='departure-date' value='4 июля 2017'>
+             <button type='button' class='calendar'>Calendar</button>
+           </div>
           </label>
 
-          <label class='search text'>Взрослые:
-            <button type='button' class='search-minus'>-</button>
-            <input type='text' id='search-adults-number' name='adults-number' value='2'>
-            <button type='button' class='search-plus'>+</button>
+          <label class='label'>Взрослые:
+            <div class='input'>
+              <button type='button' class='search-minus'>-</button>
+              <input type='text' id='search-adults-number' name='adults-number' value='2' class='search-number'>
+              <button type='button' class='search-plus'>+</button>
+            </div>
           </label>
-          <label class='search text'>Дети:
-            <button type='button' class='search-minus'>-</button>
-            <input type='text' id='search-kids-number' name='kids-number' value='0'>
-            <button type='button' class='search-plus'>+</button>
+
+          <label class='label'>Дети:
+            <div class='input'>
+              <button type='button' class='search-minus'>-</button>
+              <input type='text' id='search-kids-number' name='kids-number' value='0' class='search-number'>
+              <button type='button' class='search-plus'>+</button>
+            </div>
           </label>
 
           <button type='submit' class='hotel-search-submit-button'>Найти</button>
@@ -123,9 +140,7 @@
       </main>
 
       <footer class='main-footer'>
-        <a class='transfer' href='#' aria-label='Visit Sedona'>
-        <img src='img/header/logo.svg' width='100' height='100' alt='visit-sedona'>
-      </a>
+        <a class='transfer' href='#' aria-label='Visit Sedona'>#VISITSEDONA</a>
 
         <div class='footer-social'>
         <ul class='social-list'>
@@ -142,7 +157,7 @@
       </div>
 
       <a class='copyright' href='https://htmlacademy.ru' aria-label='HTML academy'>Website By
-      <img src='img/footer-button.svg' width='100' height='100' alt='Изображение HTML academy'>
+        <div class="copyright-image"></div>
       </a>
     </footer>
 
