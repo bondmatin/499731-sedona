@@ -132,7 +132,7 @@ button {
 }
 
 /* 2.2. ПЯТЬ ПРИЧИН */
-
+/* 2.2.1. ГОЛУБЫЕ КВАДРАТЫ */
 .odd {
   margin:0;
   padding:0;
@@ -148,11 +148,9 @@ button {
 .odd h3 {
   color: #ffffff;
 }
-.reason-1 {
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 308px;
+
+.odd .text {
+    margin-top: 21px;
 }
 
 .info-cell {
@@ -165,9 +163,14 @@ button {
   padding-bottom: 60px;
  }
 
-.second .features-item {
-  padding-top: 55px;
-  padding-bottom: 85 px;
+.reason-1 {
+  width: 308px;
+  margin: auto;
+}
+
+.reason-2 {
+  width: 303px;
+  margin: auto;
 }
 
 .info-section-background-1, .info-section-background-2 {
@@ -185,23 +188,31 @@ button {
   background-image: url('../img/main-page/main-page-info-background-2.jpg');
 }
 
+/* 2.2.2. ДОМ, ГАБМБУРГЕР, ПОДАРОК */
+
 .info-section ul {
   list-style: none;
 }
 
-.features-list {
+.second .features-list {
   margin:0;
   padding:0;
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
+}
+
+.second .features-item {
+  width: 304px;
+  margin-top: 55px;
+  margin-bottom: 85px
 }
 
 .info .icon {
   background-repeat: no-repeat;
-  background-color: #81b3d2;
+  margin:auto;
 }
 
 .house {
@@ -222,8 +233,31 @@ button {
   background-image: url('../img/main-page/icon-gift.svg');
 }
 
-.info-section .last {
+/* 2.2.3. СЕРЫЕ КВАДРАТЫ */
+
+
+.last .features-list {
+  margin:0;
+  padding:0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
   background-color: #eeeeee;
+}
+
+.last .features-item {
+  width: 270px;
+}
+
+.last h3 {
+  margin-top: 45px;
+}
+
+.last .text {
+  margin-top: 25px;
+  margin-bottom: 65px;
 }
 
 
