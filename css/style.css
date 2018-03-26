@@ -402,7 +402,7 @@ button {
 }
 
 .map {
-  width: 100%;
+  width: 1200px;
   height: 748px;
   background-image: url('../img/main-page/map');
   background-position: no-repeat;
@@ -411,17 +411,21 @@ button {
 
 /* 4. ПОДВАЛ */
 .main-footer {
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 36px 101px;
-  padding-left: 132px;
+  width: 1200px;
+  padding: 36px 0;
+  background-color: rgba(249,251, 246, 0.9);
+}
 
+.footer-container {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .transfer {
+  width: 145px;
+  margin-right: 250px;
+
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -429,19 +433,26 @@ button {
 }
 
 .footer-social {
-  text-align: center;
+  width: 200px;
 }
 
-.footer-social ul {
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
 .social-button {
+  display:flex;
   width: 46px;
   height: 46px;
+  margin-right: 6px;
+
   font-size: 0;
+
   background-color: #81b3d2;
-  background-repeat:no-repeat;
+  background-repeat :no-repeat;
+  background-position: center;
 }
 
 .social-button:hover {
@@ -466,6 +477,11 @@ button {
 }
 
 .copyright {
+  display: flex;
+
+  width: 241px;
+  margin-left: auto;
+
   text-align: center;
   line-height: 26px;
   color: #000000;
@@ -474,7 +490,9 @@ button {
 .copyright-image {
     width: 115px;
     height: 41px;
+    margin-left: 6px;
     background-image:  url('../img/footer/logo-htmlacademy.svg');
+    background-repeat: no-repeat;
 }
 
 .copyright-image:hover {
@@ -634,6 +652,7 @@ button {
   width: 11px;
   height: 10px;
   background-color: transparent;
+  background-repeat: no-repeat;
 }
 
 .catalog-sorting-button-up {
