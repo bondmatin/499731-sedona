@@ -12,7 +12,18 @@ body {
   color: #333333;
   text-transform: uppercase;
 
-  backrgound-color: #ffffff;
+  backrgound-color: #f2f2f2;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 -5px 15px 0 rgba(0,0,0,.2);
 }
 
 a {
@@ -41,13 +52,16 @@ button {
 /* 1. HEADER */
 
 .main-navigation {
-  padding:0 73px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
 }
 
 .main-header-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -69px;
   width: 138px;
   height: 70px;
 }
@@ -62,6 +76,8 @@ button {
   flex-wrap: nowrap;
   width: 100%;
   list-style: none;
+  margin: 0;
+  padding: 15px 0;
 }
 
 .site-navigation a {
@@ -82,12 +98,6 @@ button {
 
 /* 2 ИНФОРМАЦИОННАЯ СЕКЦИЯ НА ОСНОВНОЙ СТРАНИЦЕ */
 /* 2.1. БАННЕР И ЗАГОЛОВОК */
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
 .main-banner {
   height: 512px;
   background-image:
@@ -96,7 +106,7 @@ button {
   url('../img/main-page/main-page-background.jpg');
   background-repeat: no-repeat;
   background-color: #88bad8;
-  background-position:  center center, center bottom, center;
+  background-position: center 76px, center bottom, center -58px;
   /* Картинка для фона - менять картинку или размеры */
 }
 
@@ -107,7 +117,6 @@ button {
 .info h3 {
   font-size: 21px;
   font-weight: 700;
-  line-height: 26px;
   color: #000000;
 }
 
@@ -133,6 +142,10 @@ button {
 
 /* 2.2. ПЯТЬ ПРИЧИН */
 /* 2.2.1. ГОЛУБЫЕ КВАДРАТЫ */
+.info-section text {
+  margin-top: 20px;
+}
+
 .odd {
   margin:0;
   padding:0;
@@ -149,33 +162,17 @@ button {
   color: #ffffff;
 }
 
-.odd .text {
-    margin-top: 21px;
-}
-
 .info-cell {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   width: 400px;
   text-align: center;
-  padding-top: 45px;
-  padding-bottom: 60px;
+  padding: 32px 50px 56px;
  }
-
-.reason-1 {
-  width: 308px;
-  margin: auto;
-}
-
-.reason-2 {
-  width: 303px;
-  margin: auto;
-}
 
 .info-section-background-1, .info-section-background-2 {
   width: 800px;
-  height: 256px;
   background-repeat: no-repeat;
   background-color: #88bad8;
 }
@@ -203,16 +200,20 @@ button {
   justify-content: space-around;
   width: 100%;
 }
+.features-item {
+  width: 33.33%;
+  padding: 44px 50px 80px;
+}
 
-.second .features-item {
-  width: 304px;
-  margin-top: 55px;
-  margin-bottom: 85px
+.features-item h3 {
+  margin: 0 0 22px;
 }
 
 .info .icon {
   background-repeat: no-repeat;
-  margin:auto;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 15px;
 }
 
 .house {
@@ -248,23 +249,17 @@ button {
 }
 
 .last .features-item {
-  width: 270px;
+  padding-bottom: 65px;
 }
 
 .last h3 {
   margin-top: 45px;
 }
 
-.last .text {
-  margin-top: 25px;
-  margin-bottom: 65px;
-}
-
-
 /* 3. ПОИСК ОТЕЛЯ НА ОСНОВНОЙ СТРАНИЦЕ */
 
 .main-page-hotel-search {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 568px;
   text-align: center;
@@ -281,8 +276,8 @@ button {
 .hotel-search-header {
   width: 568px;
   text-align: center;
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding-top: 44px;
+  padding-bottom: 44px;
 }
 
 .hotel-search-header .caption {
@@ -299,7 +294,8 @@ button {
 }
 
 .hotel-search-button {
-  width: 568px;
+  width: 100%;
+  padding: 30px;
   background-color: #766357;
 }
 
@@ -402,8 +398,6 @@ button {
 }
 
 .map {
-  width: 1200px;
-  height: 748px;
   background-image: url('../img/main-page/map');
   background-position: no-repeat;
   background-color: #f2f1ef;
@@ -411,15 +405,23 @@ button {
 
 /* 4. ПОДВАЛ */
 .main-footer {
-  width: 1200px;
-  padding: 36px 0;
+  padding: 23px 0;
   background-color: rgba(249,251, 246, 0.9);
+}
+
+.main-page-footer {
+    margin-top: -120px;
 }
 
 .footer-container {
   display:flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.footer-item {
+  width: 33.33%;
+  text-align: center
 }
 
 .transfer {
@@ -687,6 +689,7 @@ button {
   padding: 0;
   list-style: none;
 }
+
 .catalog-item {
   display: flex;
   flex-direction: row;
@@ -697,9 +700,13 @@ button {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.catalog-item-name {
+
+}
+
 .catalog-item-image {
   height: 90px;
-  /* Не получается уменьшить высоту картинки */
+  width: 135;
   margin-right: 30px;
 }
 
@@ -707,9 +714,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  width: 258px;
   flex-wrap: wrap;
-  margin-right: 520px;
 }
 
 .catalog-info .text {
@@ -737,7 +742,7 @@ button {
   font-weight: 700;
   color: #ffffff;
   text-align: center;
-  padding:5px 0;
+  padding:5px 15px;
 }
 
 .button-more:active,
@@ -746,7 +751,6 @@ button {
 }
 
 .button-more {
-  width: 110px;
   margin-right: 6px;
   background-color: #81b3d2;
 }
@@ -760,7 +764,6 @@ button {
 }
 
 .button-book{
-  width: 142px;
   background-color: #766357;
 }
 
@@ -781,8 +784,8 @@ button {
 }
 
 .catalog-rating {
-  width: 110px;
-  padding: 0 15px;
+  width: 115px;
+  padding: 3px 15px;
   padding-top: 5px;
   text-align: center;
   color: #666666;
@@ -795,6 +798,7 @@ button {
   height: 17px;
   margin-top:30px;
   margin-bottom: 46px;
+  margin-right: auto;
 }
 
 .catalog-stars-2 {
