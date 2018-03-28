@@ -62,8 +62,6 @@ button {
   top: 0;
   left: 50%;
   margin-left: -69px;
-  width: 138px;
-  height: 70px;
 }
 /* как сделать его посередине внутри ul site-navigation, если его внутри ul нет? */
 /* как сделать, чтобы он вылезал на часть .main-banner? */
@@ -142,10 +140,6 @@ button {
 
 /* 2.2. ПЯТЬ ПРИЧИН */
 /* 2.2.1. ГОЛУБЫЕ КВАДРАТЫ */
-.info-section text {
-  margin-top: 20px;
-}
-
 .odd {
   margin:0;
   padding:0;
@@ -250,10 +244,6 @@ button {
 
 .last .features-item {
   padding-bottom: 65px;
-}
-
-.last h3 {
-  margin-top: 45px;
 }
 
 /* 3. ПОИСК ОТЕЛЯ НА ОСНОВНОЙ СТРАНИЦЕ */
@@ -386,6 +376,7 @@ button {
 
 .hotel-search-submit-button {
   width: 458px;
+  padding: 15px;
   background-color: #81b3d2;
 }
 
@@ -405,12 +396,13 @@ button {
 
 /* 4. ПОДВАЛ */
 .main-footer {
+  position: relative;
   padding: 23px 0;
-  background-color: rgba(249,251, 246, 0.9);
 }
 
 .main-page-footer {
     margin-top: -120px;
+      background-color: rgba(249,251, 246, 0.9);
 }
 
 .footer-container {
@@ -542,49 +534,6 @@ button {
   text-align: left;
 }
 
-.filters-cost {
-  width: 328px;
-}
-
-.filters-cost-inputs{
-  border: 2px solid #ffffff;
-  background-color: transparent;
-}
-
-.filters-cost-input {
-  font-family: 'PT Sans', Arial, sans-serif;
-  color: #ffffff;
-}
-
-.filters-range-scale {
-  border-bottom: 2px solid rgba(166, 140, 135, 0.3);
-}
-
-.filters-range-bar {
-  border-bottom: 2px solid #ffffff;
-}
-
-.filters-range-slider {
-  background-image: url('../img/catalog/filter-range.jpg');
-}
-
-.filters-range-slider:hover {
-  background-image: url('../img/catalog/filter-range-hover.jpg');
-}
-
-.filter-button {
-  font-family: 'PT Sans', Arial, sans-serif;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  background-color: transparent;
-}
-
-.filter-button:hover {
-  color: #000000;
-  background-color: #ffffff;
-  border: 2px solid #ffffff;
-}
-
 .filters {
   background-image: url('../img/catalog/catalog-background.jpg');
   background-repeat: no-repeat;
@@ -592,11 +541,119 @@ button {
 }
 
 .filters-checkbox, .filters-checkbox:hover  {
-  background-image: url('../img/footer/checkbox-off.svg');
+  background-image: url('../img/catalog/checkbox-off.svg');
 }
 
 .filters-checkbox:checked, .filters-checkbox:checked:hover {
-  background-image: url('../img/footer/checkbox-on.svg');
+  background-image: url('../img/catalog/checkbox-on.svg');
+}
+
+/* 5.1. ФИЛЬТР СТОИМОСТИ В СУТКИ */
+
+.filters-cost {
+  width: 328px;
+}
+
+.filters-cost-inputs {
+  position: relative;
+  margin-bottom: 20px;
+  height: 36px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.filters-cost-inputs ::after {
+  content: '';
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+
+}
+
+.filters-cost-inputs label {
+  width: 90px;
+  padding-left: 65px;
+
+  display: inline-block;
+  font-size: 14px;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.filters-cost-input {
+  width: 50px;
+  margin:0;
+
+  font-family: 'PT Sans', Arial, sans-serif;
+  color: #ffffff;
+
+  border: none;
+  background-color: transparent;
+}
+
+.filter-range {
+  position: relative;
+}
+
+.filters-range-scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.filters-range-bar {
+  width: 80%;
+  border-bottom: 2px solid #ffffff;
+ }
+
+.filters-range-slider {
+  position: absolute;
+  top: -9px;
+  /* background-image: url ('../img/catalog/filter-range.svg'); */
+
+  width: 4px;
+  height: 4px;
+
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-raduis: 50%;
+ box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.filters-range-slider:hover {
+ background: #1c4f80;
+}
+
+.filters-range-slider-min {
+  left: 0;
+}
+.filters-range-slider-max {
+  left: 80%;
+}
+
+.filter-button {
+  margin: 32px 95px;
+  padding: 8px 35px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /* 6. КАТАЛОГ-СОРТИРОВКА*/
@@ -609,15 +666,17 @@ button {
   width: 100%;
   border-bottom: 1px solid #e5e5e5;
   padding: 30px 73px;
-  padding-bottom: 37px;
-  margin: 0;
 }
 /* 6.1 СОРТИРОВКА ПО ЦЕНЕ... */
 .catalog-sorting {
+  margin-left: 50px;
+  color: #000000;
+}
+
+.catalog-sorting, .catalog-sorting-list {
+  margin-top: 8px;
   font-size: 12px;
   line-height: 18px;
-  margin-left: 50px;
-  margin-top: 8px;
 }
 
 .catalog-sorting-list {
@@ -625,22 +684,26 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  text-align: center;
   width: 250 px;
-/* не получается выровнять */
 }
 
+.catalog-sorting-item {
+  margin-left: 30px;
+}
+
+.catalog-sorting-current {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0);
+}
 .catalog-sorting-item-button {
   color: #cccccc;
   background-color: transparent;
 }
 
-.catalog-sorting-item, .catalog-sorting-item:hover{
+.catalog-sorting-item, .catalog-sorting-item-button:hover{
   border-bottom: 1px dotted #81b3d2;
 }
 
-.catalog-sorting-current, .catalog-sorting-item:hover{
+.catalog-sorting-current, .catalog-sorting-item-button:hover{
   color: #81b3d2;
 }
 
@@ -650,9 +713,15 @@ button {
 }
 /* 6.2 СОРТИРОВКА. ТРЕУГОЛЬНИКИ */
 
+.button-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
 .catalog-sorting-button {
   width: 11px;
   height: 10px;
+  margin-top: 12px;
   background-color: transparent;
   background-repeat: no-repeat;
 }
@@ -694,32 +763,25 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  flex-wrap: wrap;
   width: 100%;
   padding: 31px 73px;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.catalog-item-name {
-
-}
-
 .catalog-item-image {
-  height: 90px;
-  width: 135;
   margin-right: 30px;
 }
 
 .catalog-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  flex-wrap: wrap;
+  margin-top: -23px;
 }
 
-.catalog-info .text {
-  margin-right: 40px;
-  margin-bottom: 17px;
+.catalog-name{
+  margin-bottom: -13px;
+}
+
+.catalog-text {
+  margin-bottom: 14px;
 }
 
 .catalog-result, .catalog-item h3 {
@@ -776,15 +838,15 @@ button {
 }
 
 .rating {
+  margin-left: auto;
+  margin-right: 0;
   display:flex;
-  flex-direction: row;
-  justify-content: flex-end;
   width: 115px;
   flex-wrap: wrap;
+  margin-top: -30px;
 }
 
 .catalog-rating {
-  width: 115px;
   padding: 3px 15px;
   padding-top: 5px;
   text-align: center;
@@ -793,12 +855,13 @@ button {
 }
 
 .catalog-stars {
+  margin-left: auto;
+  margin-right: 0;
   background-image: url('../img/catalog/star.svg');
   background-repeat: space;
   height: 17px;
   margin-top:30px;
   margin-bottom: 46px;
-  margin-right: auto;
 }
 
 .catalog-stars-2 {
@@ -810,5 +873,5 @@ button {
 }
 
 .catalog-stars-4 {
-  width: 75px;
+  width: 90px;
 }

@@ -13,7 +13,7 @@
 
      <header class='main-header'>
        <a href='#' class='main-header-logo' aria-label='Main Page'>
-         <img src='img/header/logo.svg' width='100' height='100' alt='Логотип проекта 'Седона''>
+         <img src='img/header/logo.svg' width='138' height='70' alt='Логотип проекта 'Седона''>
        </a>
        <nav class='main-navigation'>
          <ul class='site-navigation'>
@@ -78,19 +78,19 @@
               <div class='filters-range-scale'>
                 <div class='filters-range-bar'></div>
               </div>
-              <button class='filters-range-slider filters-range-slider-min' type='button' tabindex='-1'></button>
-              <button class='filters-range-slider filters-range-slider-max' type='button' tabindex='-1'></button>
+              <div class='filters-range-slider filters-range-slider-min'></div>
+              <div class='filters-range-slider filters-range-slider-max'></div>
             </div>
+            <button type='submit' class='filter-button'>Показать</button>
           </fieldset>
 
-          <button type='submit' class='filter-button'>Показать</button>
         </form>
       </section>
 
       <section class='catalog'>
         <div class='catalog-filter'>
         <h2 class='visually-hidden'>Подобранные гостиницы</h2>
-        <span class='catalog-result'>Найдено:3</span>
+        <span class='catalog-result'>Найдено: 3</span>
 
         <span class='catalog-sorting'>Сортировка:</span>
           <ul class='catalog-sorting-list'>
@@ -103,26 +103,28 @@
             </li>
           </ul>
 
-          <button type='button' class='catalog-sorting-button catalog-sorting-button-up'></button>
-          <button type='button' class='catalog-sorting-button catalog-sorting-button-down'></button>
+          <div class='right'>
+            <button type='button' class='catalog-sorting-button catalog-sorting-button-up'></button>
+            <button type='button' class='catalog-sorting-button catalog-sorting-button-down' ></button>
+          </div>
       </div>
 
         <ul class='catalog-list'>
             <li class='catalog-item'>
               <div class='catalog-item-image'>
-               <img src='img/catalog/Amara-Resort-Spa.jpg' width='200' height='150' alt='Amara Resort & Spa'>
+               <img src='img/catalog/Amara-Resort-Spa.jpg'  width='135' height='90' alt='Amara Resort & Spa'>
              </div>
              <div class='catalog-info'>
-               <div>
+               <div class='catalog-name'>
                  <a href='#' aria-label='More Information' class='catalog-item-name'>
                    <h3>Amara Resort & Spa</h3>
                  </a>
                </div>
-               <div>
+               <div class='catalog-text'>
                  <span class='text'>Гостиница</span>
-                 <span class='text'>От 4000 Р.</span>
+                 <span class='text text-price'>От 4000 Р.</span>
                </div>
-               <div>
+               <div class='catalog-button'>
                  <a class='button-more' href='#' aria-label='More Information'> Подробнее </a>
                  <a class='button-book' href='#' aria-label='Book'>Забронировать</a>
                </div>
@@ -135,22 +137,23 @@
 
             <li class='catalog-item'>
               <div class='catalog-item-image'>
-               <img src='img/catalog/Desert-Quail-Inn.jpg' width='200' height='150' alt='Desert Quail Inn'>
+               <img src='img/catalog/Desert-Quail-Inn.jpg' width='135' height='90' alt='Desert Quail Inn'>
              </div>
              <div class='catalog-info'>
-               <div>
+               <div class='catalog-name'>
                  <a href='#' aria-label='More Information' class='catalog-item-name'>
                    <h3>Desert Quail Inn</h3>
                  </a>
                </div>
-               <div>
+               <div class='catalog-text'>
                  <span class='text'>Мотель</span>
                  <span class='text'>От 3000 Р.</span>
                </div>
-               <div>
+               <div class='catalog-button'>
                 <a class='button-more' href='#' aria-label='More Information'> Подробнее </a>
                 <a class='button-book' href='#' aria-label='Book'>Забронировать</a>
               </div>
+            </div>
               <div class='rating'>
                 <div class='catalog-stars catalog-stars-3'></div>
                 <div class='catalog-rating'>Рейтинг: 8,9</div>
@@ -159,19 +162,19 @@
 
             <li class='catalog-item'>
               <div class='catalog-item-image'>
-               <img src='img/catalog/Villas-at-Poco-Diablo.jpg' width='200' height='150' alt='Villas at Poco Diablo'>
+               <img src='img/catalog/Villas-at-Poco-Diablo.jpg'  width='135' height='90' alt='Villas at Poco Diablo'>
              </div>
              <div class='catalog-info'>
-               <div>
+               <div class='catalog-name'>
                  <a href='#' aria-label='More Information' class='catalog-item-name'>
                    <h3>Villas at Poco Diablo</h3>
                  </a>
                </div>
-               <div>
+               <div class='catalog-text'>
                  <span class='text'>Аппартаменты</span>
                  <span class='text'>От 2000 Р.</span>
                </div>
-               <div>
+               <div class='catalog-button'>
                 <a class='button-more' href='#' aria-label='More Information'> Подробнее </a>
                 <a class='button-book' href='#' aria-label='Book'>Забронировать</a>
               </div>
