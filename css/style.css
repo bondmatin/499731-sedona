@@ -302,20 +302,27 @@ button {
   color: rgba (255, 255, 255, 0.3);
 }
 
+/* 3.2 ФОРМА ПОИСКА ОТЕЛЯ НА ГЛАВНОЙ СТРАНИЦЕ */
+
 .hotel-search {
-  width: 458px;
-  margin: 55px;
-  margin-bottom: 167px;
+  background-color: lightgreen;
+  width: 568px;
+  padding: 55px;
   text-align: left;
 }
-.hotel-search .label, .hotel-search input {
+.hotel-search .input {
+  margin: 0;
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: 700;
   line-height: 26px;
+  padding: 10px 0;
+  border: 1px solid black;
 }
 
-.-hotel-search .input {
+.hotel-search input {
+  padding: 4px 14px;
   background-color: #f2f2f2;
+  border:none;
 }
 
 .hotel-search input:hover {
@@ -327,16 +334,20 @@ button {
   border: 2px solid #e5e5e5;
 }
 
-.input-date {
+.input-date input {
   width: 346px;
-  margin-bottom: 30px;
-  margin-left: 17px;
-  padding: 10px 13px;
 }
-
 .calendar {
+  content: "";
+  position: absolute;
   font-size: 0;
+
+  width:  21px;
+  height: 22px;
+
   background-image: url('../img/main-page/calendar.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .calendar:hover {
@@ -355,15 +366,18 @@ button {
 
 .search-number, .search-plus, .search-minus {
   width: 38px;
+  /* height: 38px; */
   text-align: center;
+  margin-left: -4px;
 }
 
-.search-minus, .search-plus  {
-  line-height: 26px;
-}
-
-.search-minus, .search-plus, {
+.search-minus, .search-plus {
+  /* margin-top: -2px; */
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 24px;
+  line-height: 21px;
   color: #a9a9a9;
+  background-color: #f2f2f2;
 }
 
 .search-minus:hover, .search-plus:hover {
@@ -376,6 +390,7 @@ button {
 
 .hotel-search-submit-button {
   width: 458px;
+  margin-top: 55px;
   padding: 15px;
   background-color: #81b3d2;
 }
@@ -402,7 +417,7 @@ button {
 
 .main-page-footer {
     margin-top: -120px;
-      background-color: rgba(249,251, 246, 0.9);
+    background-color: rgba(249,251, 246, 0.9);
 }
 
 .footer-container {
@@ -500,33 +515,45 @@ button {
 /* 5.КАТАЛОГ- ФИЛЬТР*/
 
 .filters {
-  display:flex;
-  flex-direction: column;
-  align-items: left;
-  flex-wrap: nowrap;
+  background-image: url('../img/catalog/catalog-background.jpg');
+  background-repeat: no-repeat;
   width: 100%;
-  padding: 30px 73px;
-
 }
 
-/* fieldset {
-  border: none;
-} */
+.filters-form {
+  display:flex;
+  flex-direction: row;
+  align-items: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 25px 73px;
+}
 
-.filters-list {
-  list-style: none;
-  color: #ffffff;
+fieldset {
+  margin: 0;
+  padding: 0 auto;
+  border: none;
+  background-color: lightgreen;
 }
 
 .filter-caption {
   font-size: 16px;
   font-weight: 700;
+  margin-bottom: 23px;
+  color: #ffffff;
+}
+
+.filters-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   color: #ffffff;
 }
 
 .filters-left {
   width: 165px;
   text-align: left;
+  margin-right: 100px;
 }
 
 .filters-center {
@@ -534,24 +561,58 @@ button {
   text-align: left;
 }
 
-.filters {
-  background-image: url('../img/catalog/catalog-background.jpg');
-  background-repeat: no-repeat;
-  width: 100%;
+.filters-option {
+  margin-bottom: 23px;
+  margin-left: 40px;
 }
 
-.filters-checkbox, .filters-checkbox:hover  {
+.filters-left label, .filters-center label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.filters-checkbox + label::before,
+.filters-checkbox:hover + label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  /* border: 2px solid #ffffff; */
+  /* border-radius: 2px; */
+  left: -40px;
+  top: -2px;
   background-image: url('../img/catalog/checkbox-off.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.filters-checkbox:checked, .filters-checkbox:checked:hover {
+.filters-checkbox:checked + label::after, .filters-checkbox:checked:hover + label::after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 24px;
+  left: -40px;
+  top: -2px;
   background-image: url('../img/catalog/checkbox-on.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /* 5.1. ФИЛЬТР СТОИМОСТИ В СУТКИ */
 
 .filters-cost {
   width: 328px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.filters-cost legend {
+  margin-bottom: 10px;
 }
 
 .filters-cost-inputs {

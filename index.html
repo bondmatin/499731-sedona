@@ -102,43 +102,40 @@
           <div class='text'>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиницы в Седоне </div>
         </div>
 
-        <button  type='button' class='hotel-search-button'>Поиск гостиницы в Седоне</button>
+        <button  type='button' class='hotel-search-button'>
+        Поиск гостиницы в Седоне
+       </button>
 
-        <form action='https://echo.htmlacademy.ru' method='get' class='hotel-search'>
-          <label class='label'>Дата заезда:
+        <form  class='hotel-search' action='https://echo.htmlacademy.ru' method='get'>
+
           <div class='input input-date'>
+            <label for='search-arrival-date' class='label'>Дата заезда:</label>
             <input type='date' id='search-arrival-date' name='arrival-date' value='24 апреля 2017'>
             <button type='button' class='calendar'>Calendar</button>
           </div>
-          </label>
-          <label class='label'> Дата выезда:
-            <div class='input input-date'>
+          <div class='input input-date'>
+            <label  for='search-departure-date' class='label'> Дата выезда: </label>
              <input type='date' id='search-departure-date' name='departure-date' value='4 июля 2017'>
              <button type='button' class='calendar'>Calendar</button>
            </div>
-          </label>
 
           <div class='search-input-number'>
-
-          <label class='label'>Взрослые:
             <div class='input input-number'>
+              <label for='search-adults-number' class='label'>Взрослые:</label>
               <button type='button' class='search-minus'>-</button>
-              <input type='text' id='search-adults-number' name='adults-number' value='2' class='search-number'>
+              <input class='search-number' type='text' id='search-adults-number' name='adults-number' value='2'>
               <button type='button' class='search-plus'>+</button>
             </div>
-          </label>
 
-          <label class='label'>Дети:
             <div class='input input-number'>
+              <label for='search-kids-number' class='label'>Дети:</label>
               <button type='button' class='search-minus'>-</button>
-              <input type='text' id='search-kids-number' name='kids-number' value='0' class='search-number'>
+              <input class='search-number' type='text' id='search-kids-number' name='kids-number' value='0' class='search-number'>
               <button type='button' class='search-plus'>+</button>
             </div>
-          </label>
+         </div>
 
-        </div>
-
-          <button type='submit' class='hotel-search-submit-button'>Найти</button>
+          <button type='submit' class='hotel-search-submit-button'> Найти </button>
         </form>
       </section>
 
