@@ -17,6 +17,7 @@ body {
 
 body * {
   box-sizing: border-box;
+  outline: none;
 }
 
 .wrapper {
@@ -36,6 +37,7 @@ button {
   vertical-align: middle;
   text-transform: uppercase;
   border:none;
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -56,15 +58,6 @@ button {
   font-weight: 700;
   color: #000000;
 }
-
-.main-header-logo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -69px;
-}
-/* как сделать его посередине внутри ul site-navigation, если его внутри ul нет? */
-/* как сделать, чтобы он вылезал на часть .main-banner? */
 
 .site-navigation {
   display:flex;
@@ -93,6 +86,23 @@ button {
 .site-navigation a:active, .site-navigation a.active {
   color: #766357
 }
+
+
+.main-header-logo {
+  display: block;
+  position: relative;
+  width: 75px;
+  height: 70px;
+  margin-top: -15px;
+  margin-bottom: -29px;
+  font-size: 0;
+
+  background-image: url('../img/header/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: green;
+}
+
 
 /* 2 ИНФОРМАЦИОННАЯ СЕКЦИЯ НА ОСНОВНОЙ СТРАНИЦЕ */
 /* 2.1. БАННЕР И ЗАГОЛОВОК */
@@ -164,6 +174,15 @@ button {
   text-align: center;
   padding: 32px 50px 56px;
  }
+
+ .info-section .text {
+   margin-top: 20px;
+ }
+
+.number:before, .number:after {
+  content:'—';
+  padding: 0 3px;
+}
 
 .info-section-background-1, .info-section-background-2 {
   width: 800px;
@@ -305,18 +324,19 @@ button {
 /* 3.2 ФОРМА ПОИСКА ОТЕЛЯ НА ГЛАВНОЙ СТРАНИЦЕ */
 
 .hotel-search {
-  background-color: lightgreen;
   width: 568px;
   padding: 55px;
   text-align: left;
+  background-color: #fff;
+  box-shadow:0 0 15px 0 rgba(0,0,0,.2);
 }
+
 .hotel-search .input {
   margin: 0;
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: 700;
   line-height: 26px;
   padding: 10px 0;
-  border: 1px solid black;
 }
 
 .hotel-search input {
@@ -334,17 +354,38 @@ button {
   border: 2px solid #e5e5e5;
 }
 
-.input-date input {
-  width: 346px;
+.label {
+  display: inline-block;
+  width: 112px;
+  margin:0;
 }
+
+.input-wrap {
+  position: relative;
+  display: inline-block;
+  width: 340px;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+.input-date input {
+  z-index: 1;
+}
+
 .calendar {
   content: "";
   position: absolute;
+  z-index: 2;
   font-size: 0;
 
   width:  21px;
   height: 22px;
 
+  margin-top: -11px;
+  right: 10px;
+  top: 50%;
+
+  background-color: transparent;
   background-image: url('../img/main-page/calendar.svg');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -356,6 +397,14 @@ button {
 
 .calendar:active {
   background-image: url('../img/main-page/calendar-active.svg');
+}
+
+.input-wrap-number {
+  width: 110px;
+}
+
+.label-last {
+  width: 70px;
 }
 
 .search-input-number{
@@ -487,11 +536,11 @@ button {
 
 .copyright {
   display: flex;
+  align-items: center;
 
   width: 241px;
   margin-left: auto;
 
-  text-align: center;
   line-height: 26px;
   color: #000000;
 }
@@ -526,20 +575,18 @@ button {
   align-items: space-between;
   flex-wrap: nowrap;
   width: 100%;
-  padding: 25px 73px;
+  padding: 30px 72px;
 }
 
 fieldset {
   margin: 0;
-  padding: 0 auto;
+  padding: 0;
   border: none;
-  background-color: lightgreen;
 }
 
 .filter-caption {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 23px;
   color: #ffffff;
 }
 
@@ -550,19 +597,15 @@ fieldset {
   color: #ffffff;
 }
 
-.filters-left {
-  width: 165px;
-  text-align: left;
-  margin-right: 100px;
-}
-
-.filters-center {
-  width: 183px;
+.filters-left, .filters-center {
+  width: 255px;
+  margin: 0;
   text-align: left;
 }
 
 .filters-option {
-  margin-bottom: 23px;
+  margin-top: 23px;
+  margin-bottom: 0;
   margin-left: 40px;
 }
 
@@ -621,6 +664,9 @@ fieldset {
   height: 36px;
   border: 2px solid #ffffff;
   border-radius: 2px;
+  align-items: center;
+
+  line-height: 32px;
   background-color: transparent;
 }
 
@@ -661,7 +707,7 @@ fieldset {
   background-color: transparent;
 }
 
-.filter-range {
+.filters-range {
   position: relative;
 }
 
@@ -678,15 +724,14 @@ fieldset {
 .filters-range-slider {
   position: absolute;
   top: -9px;
-  /* background-image: url ('../img/catalog/filter-range.svg'); */
 
-  width: 4px;
-  height: 4px;
+  width: 20px;
+  height: 20px;
 
   background-color: #ababab;
   border: 8px solid #ffffff;
-  border-raduis: 50%;
- box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  border-radius: 100%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
 
@@ -703,6 +748,7 @@ fieldset {
 
 .filter-button {
   margin: 32px 95px;
+  margin-bottom: 0;
   padding: 8px 35px;
   font-family: 'PT Sans', Arial, sans-serif;
   color: #ffffff;
@@ -726,16 +772,21 @@ fieldset {
   justify-content: left;
   width: 100%;
   border-bottom: 1px solid #e5e5e5;
-  padding: 30px 73px;
+  padding: 23px 73px;
+  align-items: center;
 }
 /* 6.1 СОРТИРОВКА ПО ЦЕНЕ... */
-.catalog-sorting {
-  margin-left: 50px;
+.catalog-result, .catalog-sorting {
   color: #000000;
 }
 
+.catalog-sorting {
+  margin-left: 50px;
+}
+
 .catalog-sorting, .catalog-sorting-list {
-  margin-top: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 12px;
   line-height: 18px;
 }
@@ -760,7 +811,8 @@ fieldset {
   background-color: transparent;
 }
 
-.catalog-sorting-item, .catalog-sorting-item-button:hover{
+.catalog-sorting-item-button, .catalog-sorting-item-button:hover{
+  padding: 0;
   border-bottom: 1px dotted #81b3d2;
 }
 
@@ -782,12 +834,13 @@ fieldset {
 .catalog-sorting-button {
   width: 11px;
   height: 10px;
-  margin-top: 12px;
+  /* margin-top: 12px; */
   background-color: transparent;
   background-repeat: no-repeat;
 }
 
 .catalog-sorting-button-up {
+  margin-right: 3px;
   background-image: url('../img/catalog/button-up.svg');
 }
 
@@ -809,7 +862,8 @@ fieldset {
 }
 
 .catalog-sorting-button-down:active,
-.catalog-sorting-button-down:checked  {
+.catalog-sorting-button-down:checked,
+.catalog-sorting-button-down-active  {
   background-image: url('../img/catalog/button-down-active.svg');
 }
 
@@ -849,6 +903,9 @@ fieldset {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
+}
+
+.catalog-item-name {
   color: #000000;
 }
 
@@ -860,12 +917,17 @@ fieldset {
   color: #b2b2b2;
 }
 
+.catalog-text span {
+  display: inline-block;
+  width: 111px;
+}
+
 .button-more, .button-book {
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
-  padding:5px 15px;
+  padding: 5px 15px;
 }
 
 .button-more:active,
@@ -926,13 +988,13 @@ fieldset {
 }
 
 .catalog-stars-2 {
-  width: 45px;
+  width: 40px;
 }
 
 .catalog-stars-3 {
-  width: 65px;
+  width: 60px;
 }
 
 .catalog-stars-4 {
-  width: 90px;
+  width: 80px;
 }

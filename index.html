@@ -12,15 +12,16 @@
    <div class='wrapper'>
 
     <header class='main-header'>
-      <a class='main-header-logo'>
+      <!-- <a class='main-header-logo'>
         <img src='img/header/logo.svg' width='100' height='100' alt='Логотип проекта 'Седона''>
-      </a>
+      </a> -->
       <nav class='main-navigation'>
         <ul class='site-navigation'>
           <li><a href='#' aria-label='Info'>Информация</a></li>
           <li><a href='#' aria-label='Photo and Video'>Фото и Видео</a></li>
+          <li><a class='main-header-logo' href='#' aria-label='Logo'>Логотип</a></li>
           <li><a href='#' aria-label='Map of the State'>Карта Штата</a></li>
-          <li><a href='#' aria-label='Hotels'>Гостиницы</a></li>
+          <li><a href='/catalog.html' aria-label='Hotels'>Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -110,28 +111,37 @@
 
           <div class='input input-date'>
             <label for='search-arrival-date' class='label'>Дата заезда:</label>
-            <input type='date' id='search-arrival-date' name='arrival-date' value='24 апреля 2017'>
-            <button type='button' class='calendar'>Calendar</button>
+            <div class='input-wrap input-wrap-date'>
+              <input type='date' id='search-arrival-date' name='arrival-date' value='24 апреля 2017'>
+              <button type='button' class='calendar'>Calendar</button>
+            </div>
           </div>
+
           <div class='input input-date'>
             <label  for='search-departure-date' class='label'> Дата выезда: </label>
+            <div class='input-wrap input-wrap-date'>
              <input type='date' id='search-departure-date' name='departure-date' value='4 июля 2017'>
              <button type='button' class='calendar'>Calendar</button>
            </div>
+          </div>
 
           <div class='search-input-number'>
             <div class='input input-number'>
               <label for='search-adults-number' class='label'>Взрослые:</label>
-              <button type='button' class='search-minus'>-</button>
-              <input class='search-number' type='text' id='search-adults-number' name='adults-number' value='2'>
-              <button type='button' class='search-plus'>+</button>
+              <div class='input-wrap input-wrap-number'>
+                <button type='button' class='search-minus'>-</button>
+                <input class='search-number' type='text' id='search-adults-number' name='adults-number' value='2'>
+                <button type='button' class='search-plus'>+</button>
+              </div>
             </div>
 
             <div class='input input-number'>
-              <label for='search-kids-number' class='label'>Дети:</label>
-              <button type='button' class='search-minus'>-</button>
-              <input class='search-number' type='text' id='search-kids-number' name='kids-number' value='0' class='search-number'>
-              <button type='button' class='search-plus'>+</button>
+              <label for='search-kids-number' class='label label-last'>Дети:</label>
+              <div class='input-wrap input-wrap-number'>
+                <button type='button' class='search-minus'>-</button>
+                <input class='search-number' type='text' id='search-kids-number' name='kids-number' value='0' class='search-number'>
+                <button type='button' class='search-plus'>+</button>
+              </div>
             </div>
          </div>
 
