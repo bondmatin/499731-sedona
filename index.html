@@ -151,7 +151,12 @@
       </section>
 
       <div class='map'>
+        <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838162.888095526!2d-112.355441782291!3d34.85437338104188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1522499309595'
+        width='1200' height='593' frameborder='0' style='border:0' allowfullscreen>
+      </iframe>
+      <p>
         <img src='img/main-page/map.jpg' width='1200' height='593' alt='Карта'>
+      </p>
       </div>
       </main>
 
@@ -177,12 +182,45 @@
 
         <div class='footer-item'>
         <a class='copyright' href='https://htmlacademy.ru' aria-label='HTML academy'> Website By
-          <div class="copyright-image"></div>
+          <div class='copyright-image'></div>
         </a>
       </div>
     </div>
     </footer>
 
    </div>
+
+   <script>
+      var link = document.querySelector('.hotel-search-button');
+      var popup = document.querySelector('.hotel-search');
+
+      var form = popup.querySelector('form');
+      var arrival-date = popup.querySelector('[name=arrival-date]');
+      var departure-date = popup.querySelector('[name=password]');
+
+      link.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        popup.classList.add('hotel-search-show');
+        arrival-date.focus();
+      });
+
+      form.addEventListener('submit', function (evt) {
+        if (!arrival-date.value || !departure-date.value) {
+        evt.preventDefault();
+        console.log('Введите дату заезда и дату выезда');
+       }
+      });
+
+      window.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains('hotel-search-show')) {
+            popup.classList.remove('hotel-search-show');
+          }
+        }
+      });
+
+   </script>
+
   </body>
 </html>
