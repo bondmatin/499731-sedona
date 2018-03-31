@@ -13,13 +13,17 @@
 
     <header class='main-header'>
       <!-- <a class='main-header-logo'>
-        <img src='img/header/logo.svg' width='100' height='100' alt='Логотип проекта 'Седона''>
+        <img src='img/header/logo.svg' width='100' height='100' alt='Логотип проекта 'Седона'>
       </a> -->
       <nav class='main-navigation'>
         <ul class='site-navigation'>
           <li><a href='#' aria-label='Info'>Информация</a></li>
           <li><a href='#' aria-label='Photo and Video'>Фото и Видео</a></li>
-          <li><a class='main-header-logo' href='#' aria-label='Logo'>Логотип</a></li>
+          <li>
+            <a class='main-header-logo' href='#' aria-label='Logo'>
+            <img src='../img/header/logo.svg' width='75' height='70' alt='Логотип проекта 'Седона''>
+            </a>
+          </li>
           <li><a href='#' aria-label='Map of the State'>Карта Штата</a></li>
           <li><a href='/catalog.html' aria-label='Hotels'>Гостиницы</a></li>
         </ul>
@@ -109,7 +113,7 @@
 
         <form  class='hotel-search' action='https://echo.htmlacademy.ru' method='get'>
 
-          <div class='input input-date'>
+          <div class='form-row form-row-date'>
             <label for='search-arrival-date' class='label'>Дата заезда:</label>
             <div class='input-wrap input-wrap-date'>
               <input type='date' id='search-arrival-date' name='arrival-date' value='24 апреля 2017'>
@@ -117,7 +121,7 @@
             </div>
           </div>
 
-          <div class='input input-date'>
+          <div class='form-row form-row-date'>
             <label  for='search-departure-date' class='label'> Дата выезда: </label>
             <div class='input-wrap input-wrap-date'>
              <input type='date' id='search-departure-date' name='departure-date' value='4 июля 2017'>
@@ -126,7 +130,7 @@
           </div>
 
           <div class='search-input-number'>
-            <div class='input input-number'>
+            <div class='form-row form-row-number'>
               <label for='search-adults-number' class='label'>Взрослые:</label>
               <div class='input-wrap input-wrap-number'>
                 <button type='button' class='search-minus'>-</button>
@@ -135,7 +139,7 @@
               </div>
             </div>
 
-            <div class='input input-number'>
+            <div class='form-row form-row-number'>
               <label for='search-kids-number' class='label label-last'>Дети:</label>
               <div class='input-wrap input-wrap-number'>
                 <button type='button' class='search-minus'>-</button>
