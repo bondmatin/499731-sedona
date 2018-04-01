@@ -6,123 +6,117 @@
    <link rel='stylesheet' href='css/normalize.css'>
    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic'>
    <link rel='stylesheet' href='css/style.css'>
-  </head>
+</head>
 
   <body>
    <div class='wrapper'>
 
     <header class='main-header'>
       <nav class='main-navigation'>
+        <a class='main-header-logo' href='index.html' aria-label='Логотип проекта "Седона"'>
+           <img src='img/header/logo.png' width='138' height='70' alt='Логотип проекта "Седона"'>
+        </a>
         <ul class='site-navigation'>
-          <li><a href='#' aria-label='Info'>Информация</a></li>
-          <li><a href='#' aria-label='Photo and Video'>Фото и Видео</a></li>
-          <li>
-            <a class='main-header-logo' href='#' aria-label='Logo'>
-            <img src='../img/header/logo.svg' width='75' height='70' alt='Логотип проекта 'Седона''>
-            </a>
-          </li>
-          <li><a href='#' aria-label='Map of the State'>Карта Штата</a></li>
-          <li><a href='/catalog.html' aria-label='Hotels'>Гостиницы</a></li>
+          <li><a href='#'>Информация</a></li>
+          <li><a href='#'>Фото и Видео</a></li>
+          <li><a href='#'>Карта Штата</a></li>
+          <li><a href='catalog.html'>Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main class='container'>
-      <h1 class='visually-hidden'>Седона</h1>
-      <div class='main-banner'> </div>
+	
+      <section class='main-banner'>
+        <h1 class='visually-hidden'>Седона</h1>
+	  </section>
 
       <section class='info'>
         <div class='advantage'>
-          <h2 class='visually-hidden'>Преимущества</h2>
-          <h3>Седона - небольшой городок в Аризоне, заслуживающий большего!</h3>
+          <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
           <span class='text'>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</span>
         </div>
 
         <div class='info-section odd'>
           <div class='info-cell'>
-              <h3>Настоящий <br> городок</h3>
+              <h2>Настоящий <br> городок</h2>
               <span class='number'>№1</span>
               <div class='text'>Седона - не аттракцион для туристов, там течет своя жизнь</div>
           </div>
-          <div  class='info-section-background-1'> </div>
+          <div  class='info-section-background info-section-background-1'></div>
         </div>
 
-        <div class='info-section second'>
-          <ul class='features-list'>
-            <li class='features-item'>
-              <div class='icon house'> </div>
-              <h3>Жилье</h3>
-              <div class='text'>Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
-            </li>
-            <li class='features-item'>
-              <div class='icon hamburger'> </div>
-              <h3>Еда</h3>
-              <div class='text'> Всегда заказывайте фирменный бургер. Вы не разачоруетесь! </div>
-            </li>
-            <li class='features-item'>
-              <div class='icon gift'> </div>
-              <h3>Сувениры</h3>
-              <div class='text'>Не только китайского, но и местного производства!</div>
-            </li>
-          </ul>
+        <div class='info-section info-section-with-icons'>
+          <div class='info-cell'>
+            <div class='icon house'></div>
+            <h2>Жилье</h2>
+            <div class='text'>Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
+          </div>
+          <div class='info-cell'>
+            <div class='icon hamburger'></div>
+            <h2>Еда</h2>
+            <div class='text'> Всегда заказывайте фирменный бургер. Вы не разачоруетесь! </div>
+          </div>
+          <div class='info-cell'>
+            <div class='icon gift'></div>
+            <h2>Сувениры</h2>
+            <div class='text'>Не только китайского, но и местного производства!</div>
+          </div>
         </div>
 
         <div class='info-section odd'>
-          <div class='info-section-background-2'> </div>
+          <div class='info-section-background info-section-background-2'></div>
           <div class='info-cell'>
-            <h3>Там есть <br> мост дьявола</h3>
+            <h2>Там есть <br> мост дьявола</h2>
             <span class='number'>№2</span>
             <div class='text'>Да, по нему можно пройти! Если конечно вы осмелитесь</div>
           </div>
         </div>
 
-        <div class='info-section last'>
-          <ul class='features-list'>
-            <li class='features-item'>
-              <h3>Небольшая <br> площадь</h3>
-              <span class='number'>№3</span>
-              <div class='text'>Все достопримечательности находятся очень быстро</div>
-            </li>
-            <li class='features-item'>
-              <h3>Красивая <br> дорога</h3>
-              <span class='number'>№4</span>
-              <div class='text'>Ехать в Седону из Лас-Вегаса совсем не скучно</div>
-            </li>
-            <li class='features-item'>
-              <h3>Мало <br> туристов</h3>
-              <span class='number'>№5</span>
-              <div class='text'> Большинство едет в Гранд-Каньон и толпится там </div>
-            </li>
-          </ul>
+        <div class='info-section reverse'>
+          <div class='info-cell'>
+           <h2>Небольшая <br> площадь</h2>
+            <span class='number'>№3</span>
+            <div class='text'>Все достопримечательности находятся очень быстро</div>
+          </div>
+          <div class='info-cell'>
+            <h2>Красивая <br> дорога</h2>
+            <span class='number'>№4</span>
+            <div class='text'>Ехать в Седону из Лас-Вегаса совсем не скучно</div>
+          </div>
+          <div class='info-cell'>
+            <h2>Мало <br> туристов</h2>
+            <span class='number'>№5</span>
+            <div class='text'> Большинство едет в Гранд-Каньон и толпится там </div>
+          </div>
         </div>
       </section>
 
-      <section class='main-page-hotel-search'>
-        <h2 class='visually-hidden'>Поиск гостиницы</h2>
+      <section class='hotel-search'>
         <div class='hotel-search-header'>
-          <div class='caption'>Заинтересовались? </div>
+          <h2 class='caption'>Заинтересовались?</h2>
           <div class='text'>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиницы в Седоне </div>
         </div>
 
-        <button  type='button' class='hotel-search-button'>
+        <button  type='button' class='btn hotel-search-button'>
         Поиск гостиницы в Седоне
        </button>
 
-        <form  class='hotel-search' action='https://echo.htmlacademy.ru' method='get'>
+        <form  class='hotel-search-form' action='https://echo.htmlacademy.ru' method='get'>
 
           <div class='form-row form-row-date'>
             <label for='search-arrival-date' class='label'>Дата заезда:</label>
             <div class='input-wrap input-wrap-date'>
-              <input type='date' id='search-arrival-date' name='arrival-date' value='24 апреля 2017'>
-              <button type='button' class='calendar'>Calendar</button>
+              <input type='text' id='search-arrival-date' name='arrival-date' value='24 апреля 2017'>
+              <button type='button' class='calendar'>Календарь</button>
             </div>
           </div>
 
           <div class='form-row form-row-date'>
             <label  for='search-departure-date' class='label'> Дата выезда: </label>
             <div class='input-wrap input-wrap-date'>
-             <input type='date' id='search-departure-date' name='departure-date' value='4 июля 2017'>
-             <button type='button' class='calendar'>Calendar</button>
+             <input type='text' id='search-departure-date' name='departure-date' value='4 июля 2017'>
+             <button type='button' class='calendar'>Календарь</button>
            </div>
           </div>
 
@@ -140,13 +134,13 @@
               <label for='search-kids-number' class='label label-last'>Дети:</label>
               <div class='input-wrap input-wrap-number'>
                 <button type='button' class='search-minus'>-</button>
-                <input class='search-number' type='text' id='search-kids-number' name='kids-number' value='0' class='search-number'>
+                <input class='search-number' type='text' id='search-kids-number' name='kids-number' value='0'>
                 <button type='button' class='search-plus'>+</button>
               </div>
             </div>
          </div>
 
-          <button type='submit' class='hotel-search-submit-button'> Найти </button>
+          <button type='submit' class='btn hotel-search-submit-button'>Найти</button>
         </form>
       </section>
 
@@ -163,25 +157,25 @@
       <footer class='main-footer main-page-footer'>
         <div class='footer-container'>
           <div class='footer-item'>
-            <a class='transfer' href='#' aria-label='Visit Sedona'>#VISITSEDONA</a>
+            <span class='transfer'>#VISITSEDONA</span>
           </div>
 
-          <div class='footer-item footer-social'>
+          <div class='footer-item'>
           <ul class='social-list'>
             <li class='social-element'>
-              <a class='social-button twitter' href='#' aria-label='Twitter'>Twitter </a>
+              <a class='social-button twitter' href='#'>Twitter</a>
             </li>
             <li class='social-element'>
-              <a class='social-button facebook' href='#' aria-label='Facebook'>Facebook</a>
+              <a class='social-button facebook' href='#'>Facebook</a>
             </li>
             <li class='social-element'>
-              <a class='social-button youtube' href='#' aria-label='Youtube'>Youtube</a>
+              <a class='social-button youtube' href='#'>Youtube</a>
             </li>
           </ul>
         </div>
 
         <div class='footer-item'>
-        <a class='copyright' href='https://htmlacademy.ru' aria-label='HTML academy'> Website By
+        <a class='copyright' href='https://htmlacademy.ru/intensive/htmlcss' target='_blank'> Website By
           <div class='copyright-image'></div>
         </a>
       </div>
@@ -192,20 +186,21 @@
 
    <script>
       var link = document.querySelector('.hotel-search-button');
-      var popup = document.querySelector('.hotel-search');
+      var popup = document.querySelector('.hotel-search-form');
 
-      var form = popup.querySelector('form');
-      var arrival-date = popup.querySelector('[name=arrival-date]');
-      var departure-date = popup.querySelector('[name=password]');
+      var arrivalDate = popup.querySelector('[name=arrival-date]');
+      var departureDate = popup.querySelector('[name=departure-date]');
 
       link.addEventListener('click', function (evt) {
         evt.preventDefault();
-        popup.classList.add('hotel-search-show');
-        arrival-date.focus();
+        popup.classList.toggle('show');
+		if(popup.classList.contains('show')){
+          arrivalDate.focus();
+		}
       });
 
-      form.addEventListener('submit', function (evt) {
-        if (!arrival-date.value || !departure-date.value) {
+      popup.addEventListener('submit', function (evt) {
+        if (!arrivalDate.value || !departureDate.value) {
         evt.preventDefault();
         console.log('Введите дату заезда и дату выезда');
        }
@@ -214,13 +209,15 @@
       window.addEventListener('keydown', function (evt) {
         if (evt.keyCode === 27) {
           evt.preventDefault();
-          if (popup.classList.contains('hotel-search-show')) {
-            popup.classList.remove('hotel-search-show');
+          if (popup.classList.contains('show')) {
+            popup.classList.remove('show');
           }
         }
       });
 
    </script>
+   
+   
 
   </body>
 </html>
